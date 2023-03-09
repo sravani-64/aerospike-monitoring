@@ -1801,8 +1801,8 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 10,
-        "w": 18,
+        "h": 4,
+        "w": 6,
         "x": 6,
         "y": 21
       },
@@ -1830,7 +1830,7 @@
             "uid": "${DS_AEROSPIKE_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "((aerospike_sets_memory_data_bytes{cluster_name=~\"$cluster\", service=~\"$node|$^\", ns=~\"$namespace|$^\"}+aerospike_sets_device_data_bytes{cluster_name=~\"$cluster\", service=~\"$node|$^\", ns=~\"$namespace|$^\"})/(aerospike_sets_stop_writes_size{cluster_name=~\"$cluster\", service=~\"$node|$^\", ns=~\"$namespace|$^\"}))*100",
+          "expr": "(((aerospike_sets_memory_data_bytes{cluster_name=~\"$cluster\", service=~\"$node|$^\", ns=~\"$namespace|$^\"}+aerospike_sets_device_data_bytes{cluster_name=~\"$cluster\", service=~\"$node|$^\", ns=~\"$namespace|$^\"})/(aerospike_sets_stop_writes_size{cluster_name=~\"$cluster\", service=~\"$node|$^\", ns=~\"$namespace|$^\"}))*100)<100000",
           "format": "time_series",
           "instant": true,
           "interval": "",
@@ -1852,7 +1852,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 32
+        "y": 75
       },
       "id": 181,
       "panels": [],
@@ -1890,7 +1890,7 @@
         "h": 9,
         "w": 12,
         "x": 0,
-        "y": 33
+        "y": 76
       },
       "hiddenSeries": false,
       "hideTimeOverride": false,
@@ -2039,7 +2039,7 @@
         "h": 9,
         "w": 12,
         "x": 12,
-        "y": 33
+        "y": 76
       },
       "hiddenSeries": false,
       "id": 179,
@@ -2157,7 +2157,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 42
+        "y": 85
       },
       "id": 191,
       "panels": [],
@@ -2195,7 +2195,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 43
+        "y": 86
       },
       "hiddenSeries": false,
       "hideTimeOverride": false,
@@ -2342,7 +2342,7 @@
         "h": 10,
         "w": 12,
         "x": 12,
-        "y": 43
+        "y": 86
       },
       "hiddenSeries": false,
       "hideTimeOverride": false,
@@ -2474,7 +2474,7 @@
         "h": 10,
         "w": 12,
         "x": 0,
-        "y": 53
+        "y": 96
       },
       "hiddenSeries": false,
       "hideTimeOverride": false,
@@ -2599,7 +2599,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 63
+        "y": 106
       },
       "id": 211,
       "panels": [],
@@ -2637,7 +2637,7 @@
         "h": 8,
         "w": 8,
         "x": 0,
-        "y": 64
+        "y": 107
       },
       "hiddenSeries": false,
       "hideTimeOverride": false,
@@ -2742,7 +2742,7 @@
         "h": 8,
         "w": 8,
         "x": 8,
-        "y": 64
+        "y": 107
       },
       "hiddenSeries": false,
       "hideTimeOverride": false,
@@ -2847,7 +2847,7 @@
         "h": 8,
         "w": 8,
         "x": 16,
-        "y": 64
+        "y": 107
       },
       "hiddenSeries": false,
       "hideTimeOverride": false,
@@ -2952,7 +2952,7 @@
         "h": 8,
         "w": 8,
         "x": 0,
-        "y": 72
+        "y": 115
       },
       "hiddenSeries": false,
       "hideTimeOverride": false,
@@ -3057,7 +3057,7 @@
         "h": 8,
         "w": 8,
         "x": 8,
-        "y": 72
+        "y": 115
       },
       "hiddenSeries": false,
       "hideTimeOverride": false,
@@ -3162,7 +3162,7 @@
         "h": 8,
         "w": 8,
         "x": 16,
-        "y": 72
+        "y": 115
       },
       "hiddenSeries": false,
       "hideTimeOverride": false,
@@ -3267,7 +3267,7 @@
         "h": 8,
         "w": 8,
         "x": 0,
-        "y": 80
+        "y": 123
       },
       "hiddenSeries": false,
       "hideTimeOverride": false,
@@ -3373,7 +3373,7 @@
         "h": 8,
         "w": 8,
         "x": 8,
-        "y": 80
+        "y": 123
       },
       "hiddenSeries": false,
       "hideTimeOverride": false,
@@ -3478,7 +3478,7 @@
         "h": 8,
         "w": 8,
         "x": 16,
-        "y": 80
+        "y": 123
       },
       "hiddenSeries": false,
       "hideTimeOverride": false,
@@ -3595,7 +3595,7 @@
         "h": 8,
         "w": 8,
         "x": 0,
-        "y": 88
+        "y": 131
       },
       "hiddenSeries": false,
       "hideTimeOverride": false,
@@ -3702,7 +3702,7 @@
         "h": 8,
         "w": 8,
         "x": 8,
-        "y": 88
+        "y": 131
       },
       "hiddenSeries": false,
       "hideTimeOverride": false,
@@ -3797,7 +3797,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 96
+        "y": 139
       },
       "id": 259,
       "panels": [],
@@ -3835,7 +3835,7 @@
         "h": 8,
         "w": 8,
         "x": 0,
-        "y": 97
+        "y": 140
       },
       "hiddenSeries": false,
       "hideTimeOverride": false,
@@ -3964,7 +3964,7 @@
         "h": 8,
         "w": 8,
         "x": 8,
-        "y": 97
+        "y": 140
       },
       "hiddenSeries": false,
       "hideTimeOverride": false,
@@ -4070,7 +4070,7 @@
         "h": 8,
         "w": 8,
         "x": 16,
-        "y": 97
+        "y": 140
       },
       "hiddenSeries": false,
       "hideTimeOverride": false,
@@ -4175,7 +4175,7 @@
         "h": 8,
         "w": 8,
         "x": 0,
-        "y": 105
+        "y": 148
       },
       "hiddenSeries": false,
       "hideTimeOverride": false,
@@ -4311,7 +4311,7 @@
         "h": 8,
         "w": 8,
         "x": 8,
-        "y": 105
+        "y": 148
       },
       "hiddenSeries": false,
       "hideTimeOverride": false,
@@ -4415,7 +4415,7 @@
         "h": 8,
         "w": 8,
         "x": 16,
-        "y": 105
+        "y": 148
       },
       "hiddenSeries": false,
       "hideTimeOverride": false,
@@ -4518,7 +4518,7 @@
         "h": 8,
         "w": 8,
         "x": 0,
-        "y": 113
+        "y": 156
       },
       "hiddenSeries": false,
       "hideTimeOverride": false,
@@ -4634,7 +4634,7 @@
         "h": 8,
         "w": 8,
         "x": 8,
-        "y": 113
+        "y": 156
       },
       "hiddenSeries": false,
       "hideTimeOverride": false,
@@ -4750,7 +4750,7 @@
         "h": 8,
         "w": 8,
         "x": 16,
-        "y": 113
+        "y": 156
       },
       "hiddenSeries": false,
       "hideTimeOverride": false,
@@ -4865,7 +4865,7 @@
         "h": 8,
         "w": 8,
         "x": 0,
-        "y": 121
+        "y": 164
       },
       "hiddenSeries": false,
       "hideTimeOverride": false,
@@ -5026,7 +5026,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 129
+        "y": 172
       },
       "id": 700,
       "panels": [
@@ -5708,7 +5708,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 130
+        "y": 173
       },
       "id": 400,
       "panels": [
@@ -6659,7 +6659,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 131
+        "y": 174
       },
       "id": 500,
       "panels": [
@@ -7610,7 +7610,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 132
+        "y": 175
       },
       "id": 600,
       "panels": [
@@ -7906,6 +7906,6 @@
   "timezone": "",
   "title": "Namespace View",
   "uid": "zGcUKcDZz",
-  "version": 4,
+  "version": 8,
   "weekStart": ""
 }
