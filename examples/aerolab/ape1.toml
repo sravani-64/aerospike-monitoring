@@ -5,7 +5,7 @@ cert_file = ""
 key_file = ""
 root_ca = ""
 key_file_passphrase = ""
-labels = {type="development",source="aerospike",latitude="10",longitude="10"}
+labels = {type="development",source="aerospike",latitude="41.8780",longitude="-93.0977"}
 bind = ":9145"
 timeout = 10
 log_file = ""
