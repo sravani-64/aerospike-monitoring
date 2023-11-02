@@ -18,8 +18,8 @@ exporters:
 
   datadog:
     api: 
-      site: datadoghq.com
-      key: <DATADOG-APP-KEY>
+      site: us5.datadoghq.com
+      key: fa8fae63eef54286109521e4abc63050
       
   logging:
 
