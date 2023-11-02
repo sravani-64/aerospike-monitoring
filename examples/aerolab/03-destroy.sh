@@ -1,10 +1,10 @@
 #!/bin/bash
 
-aerolab cluster stop -n dc1
-aerolab cluster stop -n dc2
-aerolab client stop -n ams
-aerolab cluster destroy -n dc1
-aerolab cluster destroy -n dc2
-aerolab client destroy -n ams
+aerolab cluster stop -n six
+aerolab cluster stop -n seven
+aerolab client stop -n ams-test
+aerolab cluster destroy -n six
+aerolab cluster destroy -n seven
+aerolab client destroy -n ams-test
 
-rm aerospike-server-enterprise*
+

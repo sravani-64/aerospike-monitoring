@@ -1,0 +1,61 @@
+logging:
+    - any: info
+      name: console
+namespaces:
+    - index-type:
+        type: shmem
+      memory-size: 4294967296
+      name: test
+      sindex-type:
+        type: shmem
+      storage-engine:
+        type: memory
+network:
+    fabric:
+        port: 3001
+    heartbeat:
+        mesh-seed-address-ports:
+            - 10.128.15.207:3002
+            - 10.128.15.208:3002
+            - 10.128.15.209:3002
+            - 10.128.15.210:3002
+        mode: mesh
+        mtu: 1460
+        port: 3002
+    info:
+        port: 3003
+    service:
+        addresses:
+            - any
+        port: 3000
+    tls:
+        - ca-file: /etc/aerospike/ssl/tls1/cacert.pem
+          cert-file: /etc/aerospike/ssl/tls1/cert.pem
+          key-file: /etc/aerospike/ssl/tls1/key.pem
+          name: tls1
+security:
+    enable-quotas: true
+service:
+    batch-index-threads: 2
+    cluster-name: dc1
+    feature-key-file: /etc/aerospike/features.conf
+    node-id: BB9CE0F800A0142
+    service-threads: 2
+xdr:
+    dcs:
+        - auth-mode: internal
+          auth-password-file: /etc/password.txt
+          auth-user: user1
+          name: dc2
+          namespaces:
+            - name: test
+          node-address-ports:
+            - 10.128.15.211:3000
+            - 10.128.15.212:3000
+            - 10.128.15.213:3000
+        - connector: true
+          name: client
+          namespaces:
+            - name: test
+          node-address-ports:
+            - 10.128.15.217:8901
